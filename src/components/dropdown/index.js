@@ -4,7 +4,12 @@ function Index({ isExpanded, item, index, setExpandedItems, expandedItems }) {
     return (
         <div key={index} className="bg-white p-4 rounded-lg mt-4">
             <div className="flex items-start justify-between">
-                <div className="flex items-start space-x-2">
+                <div onClick={() =>
+                    setExpandedItems((prev) => ({
+                        ...prev,
+                        [index]: !prev[index],
+                    }))
+                } className="flex items-start space-x-2 cursor-pointer w-full">
                     <img className="mt-1" alt="box" src="/images/invoice/svgs/box.svg" />
                     <div className="w-full">
                         <div className="space-x-2 inter-600 text-lg text-black">

@@ -20,7 +20,9 @@ function App() {
       });
   }, []);
 
-  if (!data) return <div>Loading...</div>;
+  if (!data) return <div className="min-h-screen w-full flex flex-col items-center justify-center">
+    <img alt="loader" src="/images/loader/loader.svg"/>
+  </div>;
 
   const mainInvoice = data.invoices[0];
   const otherInvoices = data.invoices.slice(1);
