@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div className="App w-full container mx-auto">
+    <div className="App w-full max-w-[1180px] mx-auto">
       <div className="flex justify-center lg:justify-start relative py-4 bg-white items-center">
         <img className="absolute left-4" alt="svg icon" src="/images/invoice/svgs/chevron.svg" />
         <p className="inter-600 text-lg pl-14">Invoice details</p>
